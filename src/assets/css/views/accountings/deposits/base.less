@@ -1,0 +1,50 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+.page-accountings-deposits {
+  .z-table {
+    .id {
+      flex: 0.25;
+    }
+    .email {
+      flex: 0.75;
+      color: inherit;
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .txid {
+      flex: 2.5;
+      color: inherit;
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .created_at {
+      flex: 1;
+    }
+    .amount {
+      flex: 0.75;
+    }
+    .currency {
+      flex: 0.5;
+    }
+    .confirmations {
+      flex: 0.5;
+    }
+    .state {
+      flex: 0.5;
+    }
+    .action {
+      flex: 0.25;
+      color: @text-color-secondary;
+    }
+  }
+}

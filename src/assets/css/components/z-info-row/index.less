@@ -1,0 +1,79 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+@row-prefix-cls: ~"z-info-row";
+
+.z-info-row {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+
+  &-head {
+    transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    color: var(--color-gray);
+    height: 24px;
+    line-height: 24px;
+  }
+
+  &-content {
+    display: flex;
+    height: 40px;
+    align-items: center;
+  }
+
+  &-desc {
+    .title {
+      font-size: 16px;
+      color: @text-color;
+    }
+    .desc {
+      font-size: 14px;
+      color: var(--color-gray);
+    }
+  }
+
+  &-focus {
+    .@{row-prefix-cls}-head {
+      color: @processing-color;
+    }
+  }
+
+  &-suffix, &-prefix {
+    margin-left: 12px;
+    color: var(--color-gray);
+
+    i {
+      line-height: initial;
+    }
+  }
+
+  .ant-select {
+    width: 100%;
+  }
+
+  &-no-edit {
+    &-border {
+      height: 32px;
+      padding-left: 11px;
+      padding-right: 24px;
+      width: 100%;
+    }
+  }
+
+  &-type-switch {
+    display: flex;
+    align-items: top;
+    line-height: 30px;
+    height: 32px + 30px;
+  }
+
+  &-type-switch &-head {
+    line-height: 30px;
+    margin-right: 8px;
+  }
+
+  &-type-switch &-content {
+    height: 30px;
+    line-height: 30px;
+    align-items: center;
+  }
+}

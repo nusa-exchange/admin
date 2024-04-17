@@ -1,0 +1,45 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+.page-exchange-markets.info {
+  .orderbook {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -6px;
+    margin-left: -6px;
+    > * {
+      flex: 1;
+      margin: 0 6px;
+      height: max-content;
+    }
+
+    .z-table {
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
+
+      .id {
+        flex: 0.75;
+      }
+
+      .uid {
+        flex: 1.25;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .ord_type {
+        flex: 0.5;
+      }
+    }
+
+    .action span {
+      color: @text-color-secondary;
+      &:hover {
+        color: @processing-color;
+      }
+    }
+  }
+}

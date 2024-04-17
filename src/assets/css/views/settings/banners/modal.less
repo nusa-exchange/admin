@@ -1,0 +1,42 @@
+.modal-upload-image {
+  .upload-banner {
+    &-container {
+      position: relative;
+      display: inline-table;
+      width: 700px;
+      height: 350px;
+      border: 2px dashed #c1c1c1;
+
+      color: #c1c1c1;
+
+      img {
+        width: 700px;
+        height: 350px;
+      }
+
+      input[type="file"] {
+        position:absolute;
+        top:0;
+        left:0;
+        opacity:0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    &-button {
+      width: 100%;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 1.5;
+      font-size: 18px;
+
+      i {
+        font-size: 48px;
+        color: #999;
+      }
+    }
+  }
+}

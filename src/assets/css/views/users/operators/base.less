@@ -1,0 +1,52 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+.page-operators {
+  box-shadow: 0 1px 16px rgba(0, 21, 41, 0.08);
+  border: @border-width-base @border-style-base @border-color-split;
+
+  .z-table-head,
+  .z-table-row {
+    .email {
+      flex: 1.4;
+    }
+    .created_at {
+      flex: 1.4;
+    }
+    .target {
+      flex: 1.4;
+    }
+    .result {
+      flex: 0.6;
+    }
+    .browser {
+      flex: 0.8;
+    }
+    .os {
+      flex: 0.8;
+    }
+    .info {
+      flex: 0.6;
+    }
+  }
+
+  a {
+    color: inherit !important;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      color: @processing-color;
+    }
+  }
+
+  .z-table-row {
+    .info {
+      i {
+        cursor: pointer;
+        color: @text-color-secondary;
+        &:hover {
+          color: @processing-color;
+        }
+      }
+    }
+  }
+}

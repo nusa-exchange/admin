@@ -1,0 +1,210 @@
+
+
+:root {
+  --up-color: #12b886;
+  --down-color: #fa5252;
+
+  --bg-color: #0e182b;
+  --bg-card-color: #1a243b;
+  --border-color: #314363;
+  --text-color: #e1e7ef;
+  --color-gray: #728bb9;
+  --blue-color: #0095ff;
+  --blue-dark-color: #295e9f;
+  --disabled-color: #576586;
+
+  --bg-dropdown-color: #25344e;
+  --border-dropdown-color: #3b4d6b;
+  --text-dropdown-color: #c6d8f3;
+
+  --header-text-color: #97b0d6;
+  --footer-text-color: #97b0d6;
+}
+
+html {
+  background: var(--bg-color);
+
+  body {
+    ::-webkit-scrollbar,
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    ::-webkit-scrollbar-track-piece,
+    &::-webkit-scrollbar-track-piece {
+      background-color: transparent;
+      border-radius: 6px;
+    }
+  
+    ::-webkit-scrollbar-track,
+    &:-webkit-scrollbar-track {
+      background-color: var(--bg-color);
+    }
+  
+    ::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb {
+      height: 0px;
+      background-color: var(--border-color);
+      border-radius: 6px;
+    }
+  }
+}
+
+.ant-layout {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+.ant-input {
+  background-color: var(--bg-card-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  height: 40px;
+
+  &::placeholder {
+    color: var(--color-gray);
+  }
+
+  &-prefix i {
+    color: var(--color-gray);
+  }
+
+  &-affix-wrapper .ant-input:not(:last-child) {
+    padding-right: 40px;
+  }
+
+  &-affix-wrapper .ant-input:not(:first-child) {
+    padding-left: 40px;
+  }
+
+  &[disabled] {
+    color: var(--text-color);
+  }
+}
+
+.ant-select-dropdown {
+  border: 1px solid var(--border-dropdown-color);
+  background-color: var(--bg-dropdown-color);
+
+  &-menu-item {
+    color: var(--text-dropdown-color);
+
+    &-selected, &:hover {
+      background-color: var(--bg-color) !important;
+    }
+
+    &-active:not(&-disabled) {
+      background-color: var(--bg-color) !important;
+    }
+  }
+}
+
+.ant-select {
+  &-selection {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background-color: var(--bg-card-color);
+    height: 40px;
+    line-height: 40px;
+  
+    &__rendered {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &-focused &-selection-selected-value {
+    color: var(--color-gray);
+    opacity: 1 !important;
+  }
+}
+
+.ant-layout-header {
+  background-color: var(--bg-card-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ant-breadcrumb {
+  color: var(--text-color);
+
+  &-link {
+    color: var(--header-text-color);
+  }
+
+  &-separator {
+    color: var(--header-text-color);
+  }
+
+  a {
+    color: var(--header-text-color);
+  }
+
+  &>span:last-child, &>span:last-child a {
+    color: var(--text-color) !important;
+
+    .ant-breadcrumb-link {
+      color: var(--text-color) !important;
+    }
+  }
+}
+
+.ant-page-header {
+  padding: 0;
+  margin: 12px 0;
+  &-heading-title {
+    color: var(--text-color);
+  }
+}
+
+.ant-breadcrumb {
+  margin: 12px 0;
+}
+
+.ant-btn-primary {
+  background-color: #1d3863;
+  border-color: var(--blue-dark-color);
+  border-radius: 2px;
+}
+
+.ant-btn {
+  font-size: 12px;
+
+  &:disabled {
+    color: var(--text-color);
+    border: none;
+  }
+}
+
+.ant-calendar {
+  border: none;
+
+  &-selected-day &-date {
+    background-color: #1d3863;
+    border-color: var(--blue-dark-color);
+  }
+
+  &-date:hover {
+    background-color: #1d3863;
+    border-color: var(--blue-dark-color);
+  }
+}
+
+.ant-tag {
+  background-color: #1d3863;
+  border-color: var(--blue-dark-color);
+}
+
+.ant-checkbox {
+  &-disabled &-inner {
+    border: none;
+  }
+}
+
+.ant-tabs-bar {
+  border: 1px solid var(--border-color);
+}
+
+.ant-switch-loading-icon, .ant-switch::after {
+  background-color: var(--text-color);
+}

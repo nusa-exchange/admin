@@ -1,0 +1,52 @@
+.z-pagination {
+  display: block;
+
+  &-item {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    color: var(--color-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 4px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      user-select: none;
+      color: inherit;
+    }
+
+    &-active {
+      color: var(--blue-color);
+      border-color: var(--blue-color);
+
+      a {
+        color: var(--blue-color);
+      }
+    }
+  }
+
+  &-loading &-item,
+  &-item-disabled {
+    color: var(--disabled-color) !important;
+    border-color: var(--disabled-color) !important;
+    cursor: not-allowed;
+  }
+
+  &-small &-item {
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    border: none;
+  }
+}

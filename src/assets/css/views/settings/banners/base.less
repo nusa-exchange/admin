@@ -1,0 +1,59 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+.page-settings-banners {
+  .z-table {
+    &-content {
+      padding-top: 0;
+    }
+
+    &-row {
+      height: auto;
+      line-height: normal;
+      padding: 12px;
+
+      > span {
+        margin: auto;
+      }
+    }
+
+    .uuid {
+      flex: 0.85;
+    }
+
+    .state {
+      flex: 0.25;
+    }
+
+    .url {
+      flex: 1.75;
+    }
+
+    .action {
+      .ant-btn {
+        margin: 0 12px;
+
+        &-preview {
+          color: @warning-color;
+          border-color: @warning-color;
+
+          &:hover {
+            background-color: @warning-color;
+          }
+        }
+
+        &-delete {
+          color: @error-color;
+          border-color: @error-color;
+
+          &:hover {
+            background-color: @error-color;
+          }
+        }
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

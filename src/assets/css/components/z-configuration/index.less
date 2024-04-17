@@ -1,0 +1,89 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+@configuration-cls: ~"z-configuration";
+@edit-panel-cls: ~"z-edit-panel";
+
+.@{configuration-cls} {
+  position: relative;
+  padding: 12px;
+  background-color: var(--bg-card-color);
+  border: 1px solid var(--border-color);
+  display: flex;
+
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  .@{edit-panel-cls} {
+    position: relative;
+    flex: 1;
+    padding: 10px 20px;
+    border-left: @border-width-base @border-style-base var(--border-color);
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &-head {
+      position: relative;
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 30px;
+
+      .@{edit-panel-cls}-action {
+        position: absolute;
+        right: 18px;
+        top: 12px;
+
+        > * {
+          margin: 0 12px;
+        }
+      }
+    }
+
+    &-content {
+      position: relative;
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+
+      > * {
+        margin-top: 12px;
+      }
+
+      .@{edit-panel-cls}-action {
+        width: 100%;
+        text-align: right;
+      }
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 20px;
+      .note {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .note-borderable {
+    position: relative;
+    width: 100%;
+    border: @border-width-base @border-style-base @border-color-split;
+    padding: 20px;
+    position: relative;
+    margin-top: 48px;
+    border-radius: 5px;
+
+    &-head {
+      position: absolute;
+      top: -11px;
+      padding: 0 2px;
+      font-weight: bold;
+    }
+  }
+}
